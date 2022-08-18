@@ -1,3 +1,32 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.favourite-btn {
+    width: 30px;
+    height: 30px;
+    border-block-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    font-size: 13px;
+}
+
+.loginBox {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.loginForm {
+    
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

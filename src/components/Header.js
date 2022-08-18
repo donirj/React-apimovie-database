@@ -5,6 +5,9 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar'
 
+
+import Buscador from './Buscador'
+
 export default function Header() {
   return (
     <>
@@ -42,6 +45,7 @@ export default function Header() {
                 </li>
             </ul>
         </nav> */}
+        <Buscador/>
         </Navbar>
     </header>
     </>

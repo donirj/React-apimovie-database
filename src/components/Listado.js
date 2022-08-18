@@ -8,10 +8,12 @@ import { Link, Navigate } from 'react-router-dom'
 import axios from  'axios'
 import swal from '@sweetalert/with-react'
 
-export default function Listado() {
+export default function Listado(props) {
   //esto levanta el token de localStorage
 
-  let token = localStorage.getItem('item')
+  let token = localStorage.getItem('token')
+
+  console.log(props);
 
   //seter para setear el listado de pelis
   //el useState del final retorna un array con estas dos posiciones: moviesList (indice0) y setMoviesList (indice1)
@@ -44,12 +46,17 @@ export default function Listado() {
     {/* si el token es falso
     { !token && <Link to="/"/>} */}
     <div className='row'>
+      {/* ESTRUCTURA BASE */}
       {
         moviesList.map((oneMovie, idx) => {
           return (
             <div className='col-4' key={idx}>
               <Card style={{ width: '18rem' }}>
                 <Card.Img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} />
+                {/* <button 
+                onClick={props.addOrRemoveFromFavs}
+                
+                className='favourite-btn'> 🧡 </button> */}
                 <Card.Body>
                   <Card.Title>{oneMovie.title}</Card.Title>
                   <Card.Text>

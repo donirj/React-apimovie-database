@@ -61,7 +61,7 @@ export default function Login() {
                     title: "Perfecto, ingresaste correctamente!",
                     icon: "success",
                   });
-                console.log(res.data);
+                console.log('token', res.data);
                 const tokenRecibido = res.data.token;
                 //dos argumentos: nombre de la propiedad donde guardas la info, el segundo es la propiedad
                 //setItem permite setear en una propiedad, el token recibido de la api
@@ -71,7 +71,6 @@ export default function Login() {
                 //comando de consola (para limpiar consola): localStorage.clear()
                 //aqui indicamos a donde navegar en caso de exito
                 navigate('./Listado')
-
             })
     }
 
@@ -79,9 +78,9 @@ export default function Login() {
 
   return (
     <>
-      <div>
+      <div className='loginBox'>
+        <Form className='loginForm' onSubmit={submitHandler}>
         <h2>Formulario de login</h2>
-        <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Correo electrónico</Form.Label>
             <br/>
